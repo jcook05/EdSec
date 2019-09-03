@@ -6,10 +6,9 @@ This Lambda Function, implemented via the Serverless Framework, is triggered fro
 
 ## Configuration
 
-SSH, TCP and UDP port remediation is configured via the Environment Variables locacted within the serverless.yml.   To activate auto-remediation of these ports simple set the environment variable for the desired protocol to true.   
+SSH, TCP and UDP port remediation is configured via the Environment Variables located within the serverless.yml file.   To activate auto-remediation of these ports simply set the environment variable for the desired protocol to true.  Alternatively, set to false to deactivate.  
 
 ## Prerequisites
-
 
    CloudWatch Event:  A Cloud Watch Event with the AuthorizeSecurityGroupIngress event pattern to trigger the Lambda Function. 
 
@@ -34,8 +33,6 @@ SSH, TCP and UDP port remediation is configured via the Environment Variables lo
 
   Lambda Role:    A role for the Lambda Function that gives appropriate Cloud Watch Logs and Ec2 Security Group privileges.  An example has been provided as LambdaPolicy.json
   
-
-
 ## Test Locally
 serverless invoke local --function secure_sg --path test/testevent.json
 
