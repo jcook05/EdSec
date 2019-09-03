@@ -1,0 +1,1 @@
+roleArn: arn:aws:iam::<your-account-number>:role/LambdaSGMgmt

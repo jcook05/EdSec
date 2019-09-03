@@ -1,0 +1,15 @@
+
+service: secure-s3
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: python3.6
+  profile: <your-target-profile>
+  role: ${file(resources/customVars.yml):roleArn} 
+
+
+functions:
+  secure_bucket:
+    handler: handler.new_bucket
+    memorySize: 512 

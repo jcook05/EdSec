@@ -1,0 +1,42 @@
+{
+    "version": "0", 
+    "id": "9de52fbe-6912-e7da-c662-9e65f9381153",
+    "detail-type": "AWS API Call via CloudTrail",
+    "source": "aws.ec2", 
+    "account": "<your-account-number>", 
+    "time": "2019-08-28T18: 07: 34Z", 
+    "region": "us-west-2",
+    "resources": [], 
+    "detail": {"eventVersion": "1.05",
+         "userIdentity": {"type": "Root", "principalId": "your-account-number", "arn": "arn:aws:iam: : <your-account-number>:root", "accountId": "<your-account-number>",
+              "accessKeyId": "<your-access-key>", "userName": "your-user-name", "sessionContext": {"sessionIssuer": {}, "webIdFederationData": {},
+              "attributes": {"mfaAuthenticated": "true", "creationDate": "2019-08-28T15: 32: 55Z"
+                }
+            },
+            "invokedBy": "signin.amazonaws.com"
+          }, 
+          "eventTime": "2019-08-28T18: 07: 34Z", 
+          "eventSource": "ec2.amazonaws.com", 
+          "eventName": "AuthorizeSecurityGroupIngress", 
+          "awsRegion": "us-west-2",
+          "sourceIPAddress": "11.111.111.111", 
+          "userAgent": "signin.amazonaws.com", 
+          "requestParameters": {"groupId": "<your-sg-id>", "ipPermissions": {"items": [
+                    {"ipProtocol": "tcp", "fromPort": 0, "toPort": 0, "groups": {}, "ipRanges": {"items": [
+                                {"cidrIp": "0.0.0.0/0"
+                                }
+                            ]
+                        }, "ipv6Ranges": {}, "prefixListIds": {}
+                    },
+                    {"ipProtocol": "tcp", "fromPort": 0, "toPort": 0, "groups": {}, "ipRanges": {}, "ipv6Ranges": {"items": [
+                                {"cidrIpv6": ": :/0"
+                                }
+                            ]
+                        }, "prefixListIds": {}
+                    }
+                ]
+            }
+        }, "responseElements": {"requestId": "7229bad1-fdc9-4419-ab57-d948040c3f93", "_return": "True"},
+         "requestID": "7229bad1-fdc9-4419-ab57-d948040c3f93", "eventID": "63b26c93-3df8-445a-a743-6540a360bc26", "eventType": "AwsApiCall"
+    }
+}

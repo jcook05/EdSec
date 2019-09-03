@@ -1,0 +1,19 @@
+
+service: secure-sg
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: python3.6
+  profile: your-profile
+  role: ${file(resources/customVars.yml):roleArn} 
+
+
+functions:
+  secure_sg:
+    handler: handler.sg_security
+    memorySize: 512 
+    environment:
+      ssh: true
+      udp: true
+      tcp: true
