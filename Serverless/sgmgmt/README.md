@@ -1,5 +1,5 @@
 
-# Event Driven S3 Security
+# Event Driven Security Group Security
 
 This Lambda Function, implemented via the Serverless Framework, is triggered from a CloudWatch Event and will ensure that Security Groups do not contain SSH, TCP, or UDP ports that are open to the public.   
 

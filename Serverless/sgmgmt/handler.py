@@ -50,8 +50,7 @@ def revokeIngress(sg_id):
 def authorizeIngressCidr(sg_id, ip_permissions):
     print("getSome")
     
-def sg_security(event, context):
-   
+def sg_security(event, context): 
     sg_id = event["detail"]["requestParameters"]["groupId"]
     group_name = getSg(event["detail"]["requestParameters"]["groupId"])["SecurityGroups"][0]["GroupName"]
     ip_permissions = getSg(event["detail"]["requestParameters"]["groupId"])["SecurityGroups"][0]["IpPermissions"]
